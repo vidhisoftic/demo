@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <link rel="stylesheet" href="/CSS/styles.css"/>
+            <link rel="icon" href="/images/weather.png"/>
+             
+    </head>
+    <body>
+        <div class="main-content">
+         {{>header}}
+        {{!-- <p>This is created by {{name}}</p> --}}
+        
+        <ul>
+             {{#each skills}}
+             <li>{{this}}</li>
+             {{/each}}
+        </ul>
+        <form>
+            <input placeholder="location">
+            <button>Search</button>
+        </form>
+        <p id="message-1"></p>
+        <p id="message-2"></p>
+        </div>
+        {{>footer}}
+
+        <script src="/js/app.js"></script>
+       
+    </body>
+</html>
