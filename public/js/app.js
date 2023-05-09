@@ -1,5 +1,5 @@
 
-console.log('client side javascript');
+
 //browse http request with fetch and print to the console
 //browser mathi link levani and then fetch
 
