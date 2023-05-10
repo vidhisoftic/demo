@@ -47,9 +47,9 @@ weatherForm.addEventListener('submit', (e) => {
                 message.textContent=data.error
             } else {
                 message.textContent=JSON.stringify(data.location)
-                console.log(data.location)
+                // console.log(data.location)
                 message2.textContent=JSON.stringify(data.weather)
-                console.log(data.weather)
+                // console.log(data.weather)
 
                 // console.log(data.location)
                 // console.log(data.weather)
