@@ -19,8 +19,10 @@ hbs.registerPartials(partialpath)
 //setup static directory to server
 app.use(express.static(publicpath));
 app.use(express.json())
-      
-app.get('',(req,res)=>{
+ app.get("/",(req,res)=>{
+    res.send('hello world')
+ })     
+app.get('/api',(req,res)=>{
     res.render('temindex',{
         title:"weather app",
         name:"helloabc",
