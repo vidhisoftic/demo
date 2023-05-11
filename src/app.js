@@ -19,10 +19,12 @@ hbs.registerPartials(partialpath)
 //setup static directory to server
 app.use(express.static(publicpath));
 app.use(express.json())
- app.get("/",(req,res)=>{
+
+app.get('/',(req,res)=>{
     res.send('hello world')
- })     
-app.get('/api',(req,res)=>{
+ })  
+
+app.get('/temindex',(req,res)=>{
     res.render('temindex',{
         title:"weather app",
         name:"helloabc",
@@ -41,15 +43,6 @@ app.get('/temhlp',(req,res)=>{
     res.render('temhlp',{
         title:"help  app",
         name:"help123"
-
-        
-    });
-})
-app.get('/temhlp/*',(req,res)=>{
-    res.render('404',{
-        title:"help  app",
-        name:"help123",
-        errormessage:"help page not found"
 
         
     });
@@ -85,19 +78,6 @@ app.get('/weather',(req,res)=>{
     })
     
 })
-
-app.get('/product',(req,res)=>{
-    if(!req.query.search){
-        return res.send({
-            error:'You must provide search term'
-        })
-    }
-    // console.log(req.query);
-    res.send({
-        products:[]
-    })
-})
-
 app.get('*',(req,res)=>{
     res.render('404',{
         title:"404 page",
