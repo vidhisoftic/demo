@@ -22,14 +22,7 @@ app.use(express.json())
       
 //req=request
 //res=response
-//in browser:-localhost:3000?name='abc'
-/*app.get('',(req,res)=>{
-    // console.log('data sent by browser ==>',req.query)//Server is up on port 3000 data sent by browser ==> { name: '"abc"' }
-    console.log('data sent by browser ==>',req.query.name)//data sent by browser ==> "abc"
-    // res.send('Hello,This is a Home Page');
-    // res.send('Hello,This is a Home Page'+req.query.name);
-    res.send('<h1>Welcome</h1>');
-})*/
+
 
 app.get('/help',(req,res)=>{
     res.send(`<h1>This is help page</h1><a href='/about'>Go to about page</a>`) //two page link -help and about
