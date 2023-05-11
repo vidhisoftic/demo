@@ -1,20 +1,18 @@
 {
     "version": 2,
+    "name":"demo",
     "builds": [
       {
-        "src": "./app.js",
+        "src": "/app.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-          {
-        "src": "/(.*)",
-        "dest": "./app.js"
-      },
       {
         "src": "/(.*)",
-        "dest": "./temindex.hbs"
+        "dest": "/app.js"
       }
+      
     ]
   }
   
